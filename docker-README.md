@@ -24,8 +24,11 @@ cd todo-app-flask-reactjs
 # Build and start the app
 docker compose up --build
 
-Once the containers are running, open your browser and visit:→ http://localhost:5173The frontend will communicate with the backend automatically.Note: The first time you run it, Docker will build both the frontend and backend images.
- TechnologiesBackend:Python 3.10 + Flask
+```
+Once the containers are running, open your browser and visit:→ http://localhost:5173The frontend will communicate with the backend automatically.
+Note: The first time you run it, Docker will build both the frontend and backend images.
+**Technologies**
+Backend:Python 3.10 + Flask
 SQLAlchemy + Flask-SQLAlchemy + Flask-Migrate
 Flask-JWT-Extended (Authentication)
 Flask-Smorest (REST API + Swagger)
@@ -50,12 +53,15 @@ todo-app-flask-reactjs/
 ├── docker-compose.yaml
 └── README.md
 
- Docker Setup DetailsI made the following improvements for smooth containerization:Frontend: Fixed Vite dev server to listen on all interfaces (--host 0.0.0.0)
+**Docker Setup Details**
+I made the following improvements for smooth containerization:
+Frontend: Fixed Vite dev server to listen on all interfaces (--host 0.0.0.0)
 Backend: Configured Flask to run on 0.0.0.0:5000 using environment variables in docker-compose.yaml
 Added proper port mapping:Frontend → 5173
 Backend → 5000
 
 Available Docker Commandsbash
+```bash
 
 # Start the app (recommended)
 docker compose up --build
@@ -68,14 +74,18 @@ docker compose logs -f
 
 # Stop containers
 docker compose down
+```
 
- What I LearnedThis was my first time working with a Flask backend.
+**What I Learned**
+This was my first time working with a Flask backend.
 I faced (and solved) these common Docker issues:Vite not accessible from the browser → Fixed with --host 0.0.0.0
 Flask only binding to localhost inside container → Fixed using FLASK_RUN_HOST=0.0.0.0 in docker-compose
 
-Everything now works perfectly with just docker compose up --build.Original ProjectThis is a fork of the excellent todo app by Remy349:Original Repository: https://github.com/Remy349/todo-app-flask-reactjs
+Everything now works perfectly with just docker compose up --build.
+**Original ProjectThis is a fork of the excellent todo app by Remy349:Original Repository: https://github.com/Remy349/todo-app-flask-reactjs**
 
- NotesThis setup is optimized for local development.
+**Notes**
+This setup is optimized for local development.
 The app uses SQLite (no external database required).
 For production, consider using a proper WSGI server (Gunicorn) and a robust database.
 
