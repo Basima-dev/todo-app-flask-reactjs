@@ -42,7 +42,7 @@ DevOps:Docker
 Docker Compose
 
  Project Structure
-<details open>
+```
 todo-app-flask-reactjs/
 ├── frontend/          # Vite + React + TypeScript
 │   └── Dockerfile
@@ -52,7 +52,7 @@ todo-app-flask-reactjs/
 │   └── ...
 ├── docker-compose.yaml
 └── README.md
-</details>
+```
 
 **Docker Setup Details**
 I made the following improvements for smooth containerization:
