@@ -4,7 +4,7 @@ A full-stack **Todo Application** with user authentication, built with **Flask**
 
 This is my forked and improved version of the original project by [Remy349](https://github.com/Remy349/todo-app-flask-reactjs), where I focused on **containerization** using **Docker** and **Docker Compose**.
 
-## ✨ Features
+##  Features
 
 - User registration and login with **JWT authentication**
 - Create, Read, Update, and Delete (CRUD) tasks and tags
@@ -13,7 +13,7 @@ This is my forked and improved version of the original project by [Remy349](http
 - Swagger UI for API documentation (`/docs`)
 - Fully containerized setup – one command to run everything
 
-## 🚀 Quick Start (Recommended)
+##  Quick Start (Recommended)
 
 Make sure you have **Docker** and **Docker Compose** installed.
 
@@ -42,7 +42,7 @@ DevOps:Docker
 Docker Compose
 
  Project Structure
-
+<details open>
 todo-app-flask-reactjs/
 ├── frontend/          # Vite + React + TypeScript
 │   └── Dockerfile
@@ -52,6 +52,7 @@ todo-app-flask-reactjs/
 │   └── ...
 ├── docker-compose.yaml
 └── README.md
+</details>
 
 **Docker Setup Details**
 I made the following improvements for smooth containerization:
